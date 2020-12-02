@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>yumn.org</title>
+  <link rel = "icon" href =  
+  "D:\talha practical\my website\images\lgo hamza 4.png" 
+          type = "image/x-icon"> 
+  <style>
+    #news-bar{
+      background-color: orange;
+      height: 30px;
+    }
+    .h-auto {
+    height: 500px;
+}
+.ribbon {
+   position: relative;
+   top: 38px;
+   right: -817px;
+}
+.container {
+   position: relative;
+   top: -8px;
+}
+
+  </style>
+  
+</head>
+<body>
+  <header class="text-gray-500 bg-gray-900 body-font">
+    
+    
+      <div id="content">
+        <img src="D:\talha practical\my website\images\pakistan-flag.gif" height="65px" width="65px" class="ribbon"/>
+     </div>
+     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="logo"><a href="#"><img src="D:\talha practical\my website\images\lgo hamza 4.png"  height="65px" width="65px" alt="logo"></a>
+<span class="ml-3 text-xl pt-12">Yumn consultancy services</span>
+  
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 text-yellow-500" style="text-decoration: underline;">HOME</a>
+        <a class="mr-5 hover:text-yellow-500" >ABOUT US</a>
+        <a class="mr-5 hover:text-yellow-500">CONTACT US</a>
+        <a class="mr-5 hover:text-yellow-500">HELP?</a>
+      </nav>
+      <button class="inline-flex items-center bg-gray-800  py-1 px-3 focus:outline-none hover:bg-gray-700 hover:text-yellow-500" style="position:relative;
+      bottom:-24px;">Go Back
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+    <!-- newsbar -->
+      <div class="slideUp" id="news-bar">
+    <marquee direction="left" scrollamount="6" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">
+    <a href="#" class="hvr-pop">Our services are available for you. Enjoy forever</a><a> -*- </a>
+    <a href="#" class="hvr-pop">Lorem ipsum dolor sit amet.</a><a> -*- </a>
+    <a href="#" class="hvr-pop">Lorem ipsum dolor sit amet.</a><a> -*- </a>
+    <a href="#" class="hvr-pop">Lorem ipsum dolor sit amet.</a><a> -*- </a>
+    <a href="#" class="hvr-pop">Lorem ipsum dolor sit amet.</a><a> -*- </a>
+    </marquee>
+        </div>
+  
+  <head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+      <script>
+        var cont=0;
+    function loopSlider(){
+      var xx= setInterval(function(){
+            switch(cont)
+            {
+            case 0:{
+                $("#slider-1").fadeOut(300);
+                $("#slider-2").delay(300).fadeIn(300);
+                $("#sButton1").removeClass("bg-yellow-600");
+                $("#sButton2").addClass("bg-yellow-600");
+            cont=1;
+            
+            break;
+            }
+            case 1:
+            {
+            
+                $("#slider-2").fadeOut(300);
+                $("#slider-1").delay(300).fadeIn(300);
+                $("#sButton2").removeClass("bg-yellow-600");
+                $("#sButton1").addClass("bg-yellow-600");
+               
+            cont=0;
+            
+            break;
+            }
+            
+            
+            }},8000);
+    
+    }
+    
+    function reinitLoop(time){
+    clearInterval(xx);
+    setTimeout(loopSlider(),time);
+    }
+    
+    
+    
+    function sliderButton1(){
+    
+        $("#slider-2").fadeOut(300);
+        $("#slider-1").delay(300).fadeIn(300);
+        $("#sButton2").removeClass("bg-yellow-600");
+        $("#sButton1").addClass("bg-yellow-600");
+        reinitLoop(4000);
+        cont=0
+        
+        }
+        
+        function sliderButton2(){
+        $("#slider-1").fadeOut(300);
+        $("#slider-2").delay(300).fadeIn(300);
+        $("#sButton1").removeClass("bg-yellow-600");
+        $("#sButton2").addClass("bg-yellow-600");
+        reinitLoop(4000);
+        cont=1
+        
+        }
+    
+        $(window).ready(function(){
+            $("#slider-2").hide();
+            $("#sButton1").addClass("bg-yellow-600");
+            
+    
+            loopSlider();
+         
+            
+        
+        
+        
+        
+        });
+    
+      
+      </script>
+    </head>
+    
+    <body>
+      <div class="sliderAx h-auto w-full">
+          <div id="slider-1" class="container mx-auto">
+            <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)">
+           <div class="md:w-1/2">
+        
+            
+            </div>  
+        </div> <!-- container -->
+          <br>
+          </div>
+    
+          <div id="slider-2" class="container mx-auto">
+            <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)">
+           
+
+    
+             
+        </div> <!-- container -->
+          <br>
+          </div>
+        </div>
+     <div  class="flex justify-between w-12 mx-auto pb-2">
+            <button id="sButton1" onclick="sliderButton1()" class="bg-yellow-600 rounded-full w-4 pb-2 " ></button>
+        <button id="sButton2" onclick="sliderButton2() " class="bg-yellow-600 rounded-full w-4 p-2"></button>
+      </div>
+    
+    </body>
+  <section class="text-gray-500 bg-gray-900 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10 hover:shadow-xl">
+        <img class="object-cover object-center rounded" alt="hero" src="D:\talha practical\my website\images\meet.jpg">
+      </div>
+      <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Before they sold out
+          <br class="hidden lg:inline-block">readymade gluten
+        </h1>
+        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+        <div class="flex justify-center">
+          <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-500 hover:text-white rounded text-lg">Button</button>
+          <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-500 hover:text-white rounded text-lg">Button</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="text-gray-500 body-font bg-gray-900">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-20">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Pitchfork Kickstarter Taxidermy</h1>
+          <div class="h-1 w-20 bg-orange-500 rounded"></div>
+        </div>
+        <p class="lg:w-1/2 w-full leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg transition duration-500 ease-in-out hover:bg-yellow-500 transform hover:-translate-y-1 hover:scale-110">
+            <a href="/"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://www.pakpeek.com/wp-content/uploads/2018/09/Real-Estate-Property-Business-in-Baluchistan.jpg" alt="content">
+            <h3 class="tracking-widest text-orange-500 text-xs font-medium title-font">SUBTITLE</h3>
+            <h2 class="text-lg text-white font-medium title-font mb-4">Chichen Itza</h2>
+            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p></a>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg bg-gray-800 p-6 rounded-lg transition duration-500 ease-in-out hover:bg-yellow-500 transform hover:-translate-y-1 hover:scale-110">
+           <a href="/"> <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://etimg.etb2bimg.com/photo/74873427.cms" alt="content">
+            <h3 class="tracking-widest text-orange-500 text-xs font-medium title-font">SUBTITLE</h3>
+            <h2 class="text-lg text-white font-medium title-font mb-4">Colosseum Roma</h2>
+            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p></a>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg bg-gray-800 p-6 rounded-lg transition duration-500 ease-in-out hover:bg-yellow-500 transform hover:-translate-y-1 hover:scale-110">
+            <a href="/">  <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://corporatelawconsultantsinlahore.yolasite.com/resources/Corporate%20Law%20Consultants%20in%20Lahore%2010.jpg?timestamp=1362394267422" alt="content">
+            <h3 class="tracking-widest text-orange-500 text-xs font-medium title-font">SUBTITLE</h3>
+            <h2 class="text-lg text-white font-medium title-font mb-4">Great Pyramid of Giza</h2>
+            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p></a>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg bg-gray-800 p-6 rounded-lg transition duration-500 ease-in-out hover:bg-yellow-500 transform hover:-translate-y-1 hover:scalyellow-500">
+            <a href="/">   <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://www.communityrights.org/wp-content/uploads/2018/10/Law-Consultant-Expert.jpg" alt="content">
+            <h3 class="tracking-widest text-orange-500 text-xs font-medium title-font">SUBTITLE</h3>
+            <h2 class="text-lg text-white font-medium title-font mb-4">San Francisco</h2>
+            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+<hr>
+<footer class="text-gray-500 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <a class="logo"><a href="#"><img src="D:\talha practical\my website\images\lgo hamza 4.png" height="50px" width="50px" alt="logo"></a>
+           <span>Yumn consultancy services</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-700">Air plant banjo lyft occupy retro adaptogen indego</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-yellow-500">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-800">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-600 text-sm text-center sm:text-left">© 2020 tailblocks —
+        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@knyttneve</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-600">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-600">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-600">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-600">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
